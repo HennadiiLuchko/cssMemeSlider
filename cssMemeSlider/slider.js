@@ -1,25 +1,42 @@
 const dot = document.querySelectorAll('.dot');
+const sliderWrapper = document.querySelector('.slider-wrapper');
+const sliderDescription = document.querySelector('.slider-description');
 const sliderLine = document.querySelector('.slider-line');
-const descriptionLine = document.querySelectorAll('.description-line');
+const descriptionLine = document.querySelector('.description-line');
 const slide = document.querySelectorAll('.slide');
+const description = document.querySelectorAll('.description');
 
 Array.from(dot);
 let sliderCount;
-let width;
+let widthSlider;
+let widthDescription;
 
-window.addEventListener('resize', Infinit);
+window.addEventListener('resize', infinit);
 
-Infinit();
-function Infinit() {
+infinit();
+function infinit() {
 
-    width = document.querySelector('.slider-wrapper').offsetWidth;
-    sliderLine.style.width = width * slide.length + 'px';
+    widthSlider = sliderWrapper.offsetWidth;
+    widthDescription = sliderDescription.offsetWidth;
+
+    sliderWrapper.style.height = (55/100) * widthSlider + 'px';
+    sliderLine.style.width = widthSlider * slide.length + 'px';
+    descriptionLine.style.width = widthDescription * description.length + 'px';
+
     slide.forEach(item => {
-        item.style.width = width + 'px';
+        item.style.width = widthSlider + 'px';
+        // item.style.height = 'auto';
+        item.style.height = (55/100) * widthSlider + 'px';
+    })
+
+    description.forEach(item => {
+        item.style.width = widthDescription + 'px';
         item.style.height = 'auto';
+        // item.style.height = (65/100) * widthSlider + 'px';
     })
 
     rollSlider();
+    rollDescription();
 }
 
 dot.forEach((element, index) => {
@@ -33,10 +50,15 @@ dot.forEach((element, index) => {
         dot[sliderCount].classList.add('active');
 
         rollSlider();
+        rollDescription();
     })
 
 })
 
 function rollSlider() {
-    sliderLine.style.transform = 'translate(-' + sliderCount * width + 'px)';
+    sliderLine.style.transform = 'translate(-' + sliderCount * widthSlider + 'px)';
+}
+
+function rollDescription() {
+    descriptionLine.style.transform = 'translate(-' + sliderCount * widthDescription + 'px)';
 }

@@ -4,17 +4,26 @@
     box-sizing: border-box;
 }
 
+.meme-slider{
+    width: 100vw;
+    height: 100vh;
+    background: grey;
+}
 .container {
-    padding: 5rem 0;
+    margin: auto;
+    padding: 0.5rem 0;
     background-color: #25282A;
+    font-family: 'Cabin', sans-serif;
+    color: #fff;
+    font-size: 1.5rem;
 }
 
 .slider-wrapper {
     display: flex;
     max-width: 80%;
-    height: 600px;
+    /* height: 600px; */
     overflow: hidden;
-    margin: 20px auto;
+    margin: 0 auto 30px;
     position: relative;
     border-radius: 20px;
 }
@@ -32,35 +41,35 @@
 } */
 
 .slide:nth-child(1) {
-    background: url(./images/bin1.jpg);
+    background: url(./images/bean1.jpg);
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .slide:nth-child(2) {
-    background: url(./images/bin2.jpg);
+    background: url(./images/bean2.jpg);
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .slide:nth-child(3) {
-    background: url(./images/mem7.jpg);
+    background: url(./images/bean3.jpg);
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .slide:nth-child(4) {
-    background: url(./images/bin4.jpg);
+    background: url(./images/bean4.jpg);
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
 .slide:nth-child(5) {
-    background: url(./images/bin5.jpg);
+    background: url(./images/bean5.jpg);
     background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -70,12 +79,27 @@
     display: flex;
     justify-content: space-between;
     max-width: 80%;
-    margin: 0 auto;
+    margin: 0 auto 20px;
+}
+
+.slider-description {
+    height: 30px;
+    width: 50%;
+    overflow: hidden;
+    position: relative;
+}
+
+.description-line {
+    display: flex;
+    position: absolute;
+    left: 0;
+    transition: all 1s;
 }
 
 .slider-controls {
     display: flex;
     gap: 5px;
+    width: 190px;
 }
 
 .dot-wrapper {
@@ -83,8 +107,8 @@
 }
 
 .dot {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
     border-radius: 50%;  
     background-color: #71ABFE;
     cursor: pointer;
@@ -103,4 +127,19 @@
 .dot:hover.active {
     border: 2px solid #fff;
     background-color: transparent;
+}
+
+@media screen and (max-width: 730px) {
+    .control-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .slider-controls {
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .slider-description {
+        width: 75%;
+    }
 }
