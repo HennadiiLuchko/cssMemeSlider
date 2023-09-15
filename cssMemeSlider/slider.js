@@ -1,4 +1,5 @@
 const dot = document.querySelectorAll('.dot');
+const dotWrapper = document.querySelectorAll('.dot-wrapper');
 const sliderWrapper = document.querySelector('.slider-wrapper');
 const sliderDescription = document.querySelector('.slider-description');
 const sliderLine = document.querySelector('.slider-line');
@@ -39,7 +40,7 @@ function infinit() {
     rollDescription();
 }
 
-dot.forEach((element, index) => {
+dotWrapper.forEach((element, index) => {
     
     element.addEventListener('click', () =>{
         
@@ -62,3 +63,19 @@ function rollSlider() {
 function rollDescription() {
     descriptionLine.style.transform = 'translate(-' + sliderCount * widthDescription + 'px)';
 }
+
+dotWrapper.forEach((element, index) => {
+    
+    element.addEventListener('click', () =>{
+        
+        sliderCount = index; 
+        dot.forEach((dot) => {
+            dot.classList.remove('active');
+        })
+        dot[sliderCount].classList.add('active');
+
+        rollSlider();
+        rollDescription();
+    })
+
+})

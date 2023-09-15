@@ -5,13 +5,15 @@
 }
 
 .meme-slider{
-    width: 100vw;
-    height: 100vh;
-    background: grey;
+    width: 100%;
+    height: 100%;
+    background-color:  #25282A;
+    padding: 0.5rem;
 }
+
 .container {
-    margin: auto;
-    padding: 0.5rem 0;
+    margin: 0.5rem auto;
+    padding: 0.8rem 0;
     background-color: #25282A;
     font-family: 'Cabin', sans-serif;
     color: #fff;
@@ -23,16 +25,16 @@
     max-width: 80%;
     /* height: 600px; */
     overflow: hidden;
-    margin: 0 auto 30px;
+    margin: 0 auto 2rem;
     position: relative;
-    border-radius: 20px;
+    border-radius: .5rem;
 }
 .slider-line {
     display: flex;
-    height: 100%;
+    /* height: 100%; */
     position: absolute;
     left: 0;
-    transition: all 1s;
+    transition: all .6s;
 }
 
 /* .slide {
@@ -79,11 +81,11 @@
     display: flex;
     justify-content: space-between;
     max-width: 80%;
-    margin: 0 auto 20px;
+    margin: 0 auto 1.8rem;
 }
 
 .slider-description {
-    height: 30px;
+    height: 2rem;
     width: 50%;
     overflow: hidden;
     position: relative;
@@ -93,22 +95,23 @@
     display: flex;
     position: absolute;
     left: 0;
-    transition: all 1s;
+    transition: all .6s;
 }
 
 .slider-controls {
     display: flex;
-    gap: 5px;
-    width: 190px;
+    justify-content: space-between;
+    width: 12.5rem;
 }
 
 .dot-wrapper {
-    padding: 5px;
+    padding: 0.5rem;
+    cursor: pointer;
 }
 
 .dot {
-    width: 24px;
-    height: 24px;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;  
     background-color: #71ABFE;
     cursor: pointer;
@@ -116,16 +119,16 @@
 
 .dot:hover {
     background-color: #fff;
-    border: 2px solid #fff;
+    border: .2rem solid #fff;
 }
 
 .active {
-    border: 2px solid #71ABFE;
+    border: .2rem solid #71ABFE;
     background-color: transparent;
 }
 
 .dot:hover.active {
-    border: 2px solid #fff;
+    border: .2rem solid #fff;
     background-color: transparent;
 }
 
