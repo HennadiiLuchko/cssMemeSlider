@@ -10,47 +10,66 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <div class="meme-slider">
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="slider-line">
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
-                    <div class="slide"></div>
+    <div class="wrapper">
+        <header class="header">
+                    <h1 class="header__title">CssMemeSlider Mr. Bean</h1>
+        </header>
+        <main class="main">
+            <div class="slider">
+                <input class="pagination__input" type="radio" id="first" name="paginationInput" value="first" checked>
+                <input class="pagination__input" type="radio" id="second" name="paginationInput" value="second">
+                <input class="pagination__input" type="radio" id="third" name="paginationInput" value="third">
+                <input class="pagination__input" type="radio" id="fourth" name="paginationInput" value="fourth">
+                <input class="pagination__input" type="radio" id="fifth" name="paginationInput" value="fifth">
+                <div class="slider__images">
+                    <div class="slider__images-wrapper">
+                        <img class="slider__img" src="./images/bean1.jpg" alt="bean1">
+                        <img class="slider__img" src="./images/bean2.jpg" alt="bean2">
+                        <img class="slider__img" src="./images/bean3.jpg" alt="bean3">
+                        <img class="slider__img" src="./images/bean4.jpg" alt="bean4">
+                        <img class="slider__img" src="./images/bean5.jpg" alt="bean5">
+                    </div>
+                </div>
+                <div class="slider__content">
+                    <div class="slider__descriptions">
+                        <div class="slider__descriptions-wrapper">
+                            <p class="slider__description">I'm the BEST</p>
+                            <p class="slider__description">I'm the BEST of the BEST</p>
+                            <p class="slider__description">Helping others is important!</p>
+                            <p class="slider__description">My code doesn't run!</p>
+                            <p class="slider__description">My code is running!!!</p>
+                        </div>
+                    </div>
+                    <div class="pagination">
+                        <div class="pagination__item">
+                            <label class="pagination__label" for="first">
+                                <span class="pagination__dot"></span>
+                            </label>
+                        </div>
+                        <div class="pagination__item">
+                            <label class="pagination__label" for="second">
+                                <span class="pagination__dot"></span>
+                            </label>
+                        </div>
+                        <div class="pagination__item">
+                            <label class="pagination__label" for="third">
+                                <span class="pagination__dot"></span>
+                            </label>
+                        </div>
+                        <div class="pagination__item">
+                            <label class="pagination__label" for="fourth">
+                                <span class="pagination__dot"></span>
+                            </label>
+                        </div>
+                        <div class="pagination__item">
+                            <label class="pagination__label" for="fifth">
+                                <span class="pagination__dot"></span>
+                            </label>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="control-wrapper">
-                <div class="slider-description">
-                    <div class="description-line">
-                        <div class="description">I'm the BEST</div>
-                        <div class="description">I'm the BEST of the BEST</div>
-                        <div class="description">Helping others is important!</div>
-                        <div class="description">My code doesn't run!</div>
-                        <div class="description">My code is running!!!</div>                                      
-                    </div>
-                </div>
-                <div class="slider-controls">
-                    <div class="dot-wrapper">
-                        <div class="dot active"></div>
-                    </div>
-                    <div class="dot-wrapper">
-                        <div class="dot"></div>
-                    </div>
-                    <div class="dot-wrapper">
-                        <div class="dot"></div>
-                    </div>
-                    <div class="dot-wrapper">
-                        <div class="dot"></div>
-                    </div>
-                    <div class="dot-wrapper">
-                        <div class="dot"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-   <script src="./slider.js"></script> 
+        </main>
+    </div>   
 </body>
 </html>
